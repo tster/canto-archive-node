@@ -16,6 +16,12 @@ sudo apt-get install git
 sudo apt-get install gcc
 sudo apt-get install make
 
+# Install Cosmovisor
+
+echo "Installing Cosmovisor..."
+
+go install github.com/provenance-io/cosmovisor/cmd/cosmovisor@latest
+
 # Create Cosmovisor Folders
 
 echo "Creating Cosmovisor folders..."
@@ -119,12 +125,12 @@ After=network.target
 
 [Service]
 User=USER
-ExecStart=/home/USER/go/bin/cosmovisor start
+ExecStart=$HOME/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
 Environment="DAEMON_NAME=cantod"
-Environment="DAEMON_HOME=/home/USER/.cantod"
+Environment="DAEMON_HOME=$HOME/.cantod"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="UNSAFE_SKIP_BACKUP=true"
