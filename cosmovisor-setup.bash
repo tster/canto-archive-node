@@ -32,7 +32,7 @@ cd Canto
 git checkout v1.0.0
 make install
 
-cp ~/go/bin/cantod ~/bin/
+sudo move ~/go/bin/cantod ~/bin/
 
 # Initialize cantod and Move Binary
 echo "Initializing cantod..."
