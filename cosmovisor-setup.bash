@@ -32,13 +32,13 @@ cd Canto
 git checkout v1.0.0
 make install
 
-sudo mv ~/go/bin/cantod ~/bin/
+sudo mv ~/go/bin/cantod /usr/bin/
 
 # Initialize cantod and Move Binary
 echo "Initializing cantod..."
 
 cantod init archive --chain-id canto_7700-1
-cp ~/bin/cantod ~/.cantod/cosmovisor/genesis/bin
+cp /usr/bin/cantod ~/.cantod/cosmovisor/genesis/bin
 
 # Install v2.0.2 Binary
 # v2.0.2 is a retrospective patch which mitigates AppHash errors previously thrown during syncing of archive nodes
