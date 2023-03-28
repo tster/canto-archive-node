@@ -11,11 +11,11 @@ Contributions are welcome!
 First, download the script:
 
 ```
-https://raw.githubusercontent.com/tster/canto-archive-node/main/cosmovisor-setup.bash
+wget https://raw.githubusercontent.com/tster/canto-archive-node/main/cosmovisor-setup.bash
 ```
 
 Then, run the script:
 
 ```
-bash cosmovisor-setup
+bash cosmovisor-setup.bash
 ```
